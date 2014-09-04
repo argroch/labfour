@@ -6,6 +6,18 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name %></div>
+
+  <div><%= f.label :age %><br />
+  <%= f.number_field :age %></div>
+
+  <div><%= f.label :location %><br />
+  <%= f.text_field :location %></div>
+
+  <div><%= f.label "Favorite Flavor" %><br />
+  <%= f.text_field :favorite_flavor %></div>
+
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
