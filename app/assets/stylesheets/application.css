@@ -18,3 +18,13 @@
 	border: 1px solid blue;
 	border-radius: 10px;
 }
+
+.name {
+	border: 1px solid blue;
+	border-radius: 10px 10px 0 0;
+}
+
+.user-info {
+	border: 1px solid blue;
+	border-radius: 0 0 10px 10px;
+}

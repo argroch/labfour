@@ -2,7 +2,23 @@
 <% if user_signed_in? %>
 	<h2>Let's Practice jQuery and AJAX</h2>
 
+	<div class="container">
+	<% @users.each do |user| %>
+		<div class="col-md-3">
+			<div class="name"><%= user.name %></div>
+			<div class="user-info">
+				<p>Age: <%= user.age %></p>
+				<p>Location: <%= user.location %></p>
+				<p>Favorite Flavor: <%= user.favorite_flavor %></p>
+				<% if user.id == current_user.id %>
+					<p>Hey! That's me!</p>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+	</div>
 
+	<%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
 
 <% else %>
 
@@ -30,12 +46,12 @@
 			  <%= f.text_field :name %></p>
 
 			  <p><%= f.label :age %><br />
-			  @<%= f.number_field :age %></p>
+			  <%= f.number_field :age %></p>
 
 			  <p><%= f.label :location %><br />
   			<%= f.text_field :location %></p>
 
-  			<p><%= f.label "Favorite Flavor" %><br />
+  			<p><%= f.label :favorite_flavor %><br />
   			<%= f.text_field :favorite_flavor %></p>
 
 			  <p><%= f.label :password %><br />
