@@ -9,14 +9,18 @@
 			<div class="user-info" id="toggleinfo_<%= user.id %>">
 				<p>Age: <%= user.age %></p>
 				<p>Location: <%= user.location %></p>
-				<p>Favorite Flavor: <%= user.favorite_flavor %></p>
+				<p>Favorite Flavor: <%= user.favorite_flavor %></p> 
+					<% if user.secrets.empty? && user.id == current_user.id %>
+						<p><%= link_to "Enter Your Secret Message Now!", new_secret_path %></p>
+					<% else %>
+						<p>Secret: Reveal</p>
+					<% end %>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('#clickname_<%= user.id %>').click(function(){
 					$('#toggleinfo_<%= user.id %>').slideToggle( "slow", function(){
-
 					});
 				});
 			})
@@ -73,17 +77,6 @@
 		</div>
 	</div>
 <% end %>
-
-
-
-<script type="text/javascript">
-
-		$('.clickname').click(function(){
-			$('.toggleinfo').slideToggle( "slow", function(){
-			});
-		});
-
-</script>
 
 
 
