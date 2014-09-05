@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+$('.clickname').click(function(){
+	$('.toggleinfo').slideToggle( "slow", function(){
+	});
+});

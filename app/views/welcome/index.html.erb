@@ -5,20 +5,28 @@
 	<div class="container">
 	<% @users.each do |user| %>
 		<div class="col-md-3">
-			<div class="name"><%= user.name %></div>
-			<div class="user-info">
+			<div class="name" id="clickname_<%= user.id %>"><%= user.name %></div>
+			<div class="user-info" id="toggleinfo_<%= user.id %>">
 				<p>Age: <%= user.age %></p>
 				<p>Location: <%= user.location %></p>
 				<p>Favorite Flavor: <%= user.favorite_flavor %></p>
-				<% if user.id == current_user.id %>
-					<p>Hey! That's me!</p>
-				<% end %>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#clickname_<%= user.id %>').click(function(){
+					$('#toggleinfo_<%= user.id %>').slideToggle( "slow", function(){
+
+					});
+				});
+			})
+		</script>
 	<% end %>
 	</div>
 
-	<%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+	<div>
+		<%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+	</div>
 
 <% else %>
 
@@ -65,3 +73,17 @@
 		</div>
 	</div>
 <% end %>
+
+
+
+<script type="text/javascript">
+
+		$('.clickname').click(function(){
+			$('.toggleinfo').slideToggle( "slow", function(){
+			});
+		});
+
+</script>
+
+
+
