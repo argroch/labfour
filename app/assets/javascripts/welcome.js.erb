@@ -1,0 +1,24 @@
+<% @user = User.all %>
+
+<% @user.each do |user| %>
+	$(document).ready(function(){
+		$('#clickname_<%= user.id %>').click(function(){
+			$('#toggleinfo_<%= user.id %>').slideToggle( "slow", function(){
+			});
+		});
+	});
+<% end %>
+
+function showSecret(user_id){
+	var ohboy = "";
+	var idName = '#secret_msg_' + user_id;
+	user_id -= 1;
+
+
+	$.getJSON("/secrets.json", function(data){
+		ohboy += data[user_id].secret_message;
+		// console.log(ohboy);
+		$(idName).html(ohboy);
+
+	});
+}

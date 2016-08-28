@@ -1,28 +1,9 @@
-== README
+== Secrets Revealed!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+So this is interesting. This was from before I was an instructor at TTS. I was just a lowly TA. And I held "labs"...every Thursday afternoon, wasn't it?
 
-Things you may want to cover:
+Well, I totally don't remember this one, but it's a pretty good intro example to using AJAX.
 
-* Ruby version
+But it wasn't working properly. So I fixed it up. Updated the gems. It could use a styling polish, but, meh - I'm keeping it around for the back-end and JS stuff.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Neat find.
