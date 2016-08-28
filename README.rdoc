@@ -7,3 +7,9 @@ Well, I totally don't remember this one, but it's a pretty good intro example to
 But it wasn't working properly. So I fixed it up. Updated the gems. It could use a styling polish, but, meh - I'm keeping it around for the back-end and JS stuff.
 
 Neat find.
+
+Oh, right. Maybe I should describe what's going on.
+
+A user signs up, creates a secret, which is associated with that user. Then you can "reveal" secrets by clicking an anchor tag, which makes an AJAX call to the Secrets JSON file.
+
+But should you be able to reveal other users' secrets? Maybe I'll revisit that if I have some time (and if I remember when said "time" presents itself).
